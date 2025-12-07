@@ -1,0 +1,18 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 54: end of line expected.
+    jump phone check
+               ^
+
+File "game/script.rpy", line 59: expected ':' not found.
+    label phone check:
+                ^
+
+File "game/script.rpy", line 63: expected ':' not found.
+    label act one:
+              ^
+
+Ren'Py Version: Ren'Py 8.2.3.24061702
+Sun Dec  7 21:48:35 2025

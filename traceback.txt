@@ -1,0 +1,32 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 19, in script
+    show casualeileen at scaled(0.75)
+  File "game/script.rpy", line 19, in <module>
+    show casualeileen at scaled(0.75)
+NameError: name 'scaled' is not defined
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 19, in script
+    show casualeileen at scaled(0.75)
+  File "C:\Users\wendy\Desktop\Game Engines\renpy-8.2.3-sdk\renpy\ast.py", line 1113, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "C:\Users\wendy\Desktop\Game Engines\renpy-8.2.3-sdk\renpy\ast.py", line 1072, in show_imspec
+    at_list = [ renpy.python.py_eval(i) for i in at_list ]
+  File "C:\Users\wendy\Desktop\Game Engines\renpy-8.2.3-sdk\renpy\ast.py", line 1072, in <listcomp>
+    at_list = [ renpy.python.py_eval(i) for i in at_list ]
+  File "C:\Users\wendy\Desktop\Game Engines\renpy-8.2.3-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\wendy\Desktop\Game Engines\renpy-8.2.3-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    show casualeileen at scaled(0.75)
+NameError: name 'scaled' is not defined
+
+Windows-10-10.0.26100 AMD64
+Ren'Py 8.2.3.24061702
+information and privacy 1.0
+Sun Dec  7 20:55:27 2025

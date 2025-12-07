@@ -5,29 +5,61 @@
 
 define e = Character("Eileen")
 
+$ safety = 0
+$ legal = 0
+$ awareness_lvl = 0
+$ mental = 0
+
+image casual eileen:
+    "casualEileen.png"
+    zoom 0.65
+
+image bedroom night:
+    "bedNight.png"
+    zoom 1.25
 
 # The game starts here.
 
 label start:
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
+    "You are Eileen."
 
-    scene bg room
+    "You are a 17 year old high school student."
 
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
+    "You own a Tiktok account and frequently post under the name 'realeileensmith08'. "
 
-    show eileen happy
+    "You were doing it for fun, but you never expected your posts to blow up."
+    
+    "And one day... It did."
 
-    # These display lines of dialogue.
+    "A cute, slightly uncanny video."
 
-    e "You've created a new Ren'Py game."
+    "Within hours, it goes massively viral."
+    
+    scene bedroom night
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+    show casual eileen
 
-    # This ends the game.
+    e "What is happening?"
+
+    play sound "phonevibrate.mp3"
+
+    e "My phone is going off!"
+
+    e "Just who is contacting me!"
+
+    menu:
+        "Check your phone":
+            $ awareness_lvl += 1
+            jump phone_check
+        "Go to sleep":
+            $ mental += 1
+            jump act_one
+
+    label phone_check:
+
+        show casual eileen at left with move
+
+label act_one:
 
     return
